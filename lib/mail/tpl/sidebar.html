@@ -1,0 +1,13 @@
+<div class="mail-folder-list">
+    <button data-ui-sref="app.mail.compose">Compose new mail</button>
+    <ul>
+        <li data-ng-repeat="f in folders">
+            <a
+                class="mail-folder-item"
+                href data-ui-sref="app.mail.folder({ folderName: f.normalizedName })"
+                data-ui-sref-active="active"
+                data-ng-bind="f.name"
+            ></a>
+        </li>
+    </ul>
+</div>

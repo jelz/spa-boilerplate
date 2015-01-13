@@ -1,0 +1,17 @@
+/.idea
+
+/node_modules
+/bower_components
+
+/config/config.js
+
+/public/build/style.css
+/public/build/style.min.css
+
+/public/build/vendor.js
+/public/build/vendor.min.js
+
+/public/build/app.js
+/public/build/app.min.js
+
+/public/index.html

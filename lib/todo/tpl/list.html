@@ -1,0 +1,17 @@
+<div class="todo-list">
+    <h2>Todo list</h2>
+    <em data-ng-show="!items.length">No todo items here! Please add first one.</em>
+
+    <div class="todo-list-items">
+        <div data-ng-repeat="item in items" class="todo-list-item">
+            <p data-ng-click="toggle(item)" data-ng-class="{ 'done': item.done }">
+                {{ item.value }}
+            </p>
+            <a href data-ng-click="remove(item)">&times;</a>
+        </div>
+    </div>
+
+    <form data-ng-submit="add()">
+        <input type="text" data-ng-model="model.value" placeholder="Add new todo item">
+    </form>
+</div>

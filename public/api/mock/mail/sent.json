@@ -1,0 +1,9 @@
+[
+  {
+    "id": 7,
+    "timestamp": 1404234000,
+    "to": "test@mail.com",
+    "title": "Test message",
+    "content": "Hello World from mail.com"
+  }
+]

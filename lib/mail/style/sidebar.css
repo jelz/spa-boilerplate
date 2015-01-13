@@ -1,0 +1,22 @@
+.mail-folder-list button {
+    margin-bottom: 20px;
+}
+
+.mail-folder-list a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    background: lightgrey;
+    color: black;
+}
+
+.mail-folder-list a.active {
+    background: lightcyan;
+}
+
+.mail-folder-list a:hover {
+    background: lightblue;
+}

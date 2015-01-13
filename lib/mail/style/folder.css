@@ -1,0 +1,18 @@
+.mail-folder h2 {
+    margin-bottom: 20px;
+}
+
+.mail-folder table {
+    width: 95%;
+    border-top: 1px solid lightgrey;
+    border-spacing: 0;
+}
+
+.mail-folder td, .mail-folder th {
+    border-bottom: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.mail-folder tr:hover {
+    background: lightblue;
+}

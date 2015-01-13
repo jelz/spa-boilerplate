@@ -1,0 +1,8 @@
+module.exports = {
+    dev: {
+        apiUrl: '/api/mock'
+    },
+    prod: {
+        apiUrl: '/api'
+    }
+};

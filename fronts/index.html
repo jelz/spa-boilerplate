@@ -1,0 +1,17 @@
+<!-- build: {{MODE}} @ {{NOW}} -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Boilerplate SPA app</title>
+        <link rel="stylesheet" href="build/style{{MIN}}.css?build={{NOW}}">
+    </head>
+    <body>
+        <div data-app-layout></div>
+        <div data-app-dev-box></div>
+        {{RELOAD}}
+        <script> window.APP_MODE = '{{MODE}}'; </script>
+        <script src="build/vendor{{MIN}}.js?build={{NOW}}"></script>
+        <script src="build/app{{MIN}}.js?build={{NOW}}"></script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+[
+  {
+    "id": 8,
+    "timestamp": 1404237600,
+    "from": "test@mail.com",
+    "title": "Some deleted message",
+    "content": "The PHP Coding Standards Fixer tool fixes most issues in your code when you want to follow the PHP coding standards as defined in the PSR-1 and PSR-2 documents."
+  }
+]

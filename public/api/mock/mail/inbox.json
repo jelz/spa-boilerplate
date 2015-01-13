@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1404216000,
+    "from": "test@test.pl",
+    "title": "Hello",
+    "content": "Hello World"
+  },
+  {
+    "id": 2,
+    "timestamp": 1404219600,
+    "from": "test2@test.pl",
+    "title": "Lorem ipsum dolor",
+    "content": "Sit amet, consectetur adipiscing elit. Cras nec congue dolor. Morbi dapibus est vitae diam fermentum malesuada. Fusce vitae auctor sem."
+  },
+  {
+    "id": 3,
+    "timestamp": 1404223200,
+    "from": "hello@gmail.com",
+    "title": "Sed sodales diam",
+    "content": "Eu nisi ultrices, a malesuada ante laoreet. Etiam nisi sapien, posuere in felis molestie, elementum dignissim massa."
+  },
+  {
+    "id": 4,
+    "timestamp": 1404226800,
+    "from": "news@letter.org",
+    "title": "Sed elit dolor",
+    "content": "Efficitur ut enim at, mollis mattis urna. Vestibulum posuere in dolor eget aliquet. Ut vestibulum leo nec leo ullamcorper pharetra. Vivamus luctus cursus risus et iaculis."
+  },
+  {
+    "id": 5,
+    "timestamp": 1404230400,
+    "from": "test@test.pl",
+    "title": "Praesent eget est pellentesque",
+    "content": "porttitor turpis gravida, ultricies leo. In sit amet justo sed nulla tempus hendrerit at pulvinar nisl. Curabitur nibh nulla."
+  }
+]

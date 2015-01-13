@@ -1,0 +1,22 @@
+.mail-message-header strong {
+    font-size: 20px;
+}
+
+.mail-message-meta {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mail-compose input {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 300px;
+}
+
+.mail-compose textarea {
+    display: block;
+    width: 600px;
+    height: 200px;
+    font-family: monospace;
+}

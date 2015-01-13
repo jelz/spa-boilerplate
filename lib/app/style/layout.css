@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+#app-container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+#app-sidebar {
+    width: 220px;
+    float: left;
+}
+
+#app-sidebar h1 {
+    margin-bottom: 20px;
+}
+
+#app-content {
+    margin-left: 250px;
+    border-left: 1px dashed lightgrey;
+    padding: 10px 20px 20px;
+    min-height: 400px;
+}
+
+#nav {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#nav a {
+    display: block;
+    float: left;
+    padding: 7px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background: lightgrey;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#nav a.active {
+    background: lightcyan;
+}
+
+#nav a:hover, #nav a.active:hover {
+    background: lightblue;
+}

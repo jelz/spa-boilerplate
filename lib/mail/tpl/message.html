@@ -1,0 +1,13 @@
+<div class="mail-message">
+    <div class="mail-message-header">
+        <small>{{ folder.name }} ></small>
+        <strong>{{ message.title }}</strong>
+    </div>
+
+    <div class="mail-message-meta">
+        <p>{{ folder.normalizedName === 'sent' ? 'To' : 'From' }}: {{ message.from || message.to }}</p>
+        <p>{{ message.timestamp*1000 | date:'medium' }}</p>
+    </div>
+
+    <pre>{{ message.content }}</pre>
+</div>

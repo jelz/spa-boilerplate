@@ -1,0 +1,28 @@
+<div class="mail-folder">
+    <h2>{{ folder.name }}</h2>
+    <em data-ng-show="!messages.length">There are no messages in this folder.</em>
+
+    <table data-ng-show="messages.length">
+        <thead>
+            <tr>
+                <th>{{ folder.normalizedName === 'sent' ? 'To' : 'From' }}</th>
+                <th>Date</th>
+                <th>Topic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="msg in messages">
+                <td>{{ msg.from || msg.to }}</td>
+                <td>{{ msg.timestamp*1000 | date:'medium' }}</td>
+                <td>
+                    <a
+                        href
+                        data-ui-sref="app.mail.folder.message({ folderName: folder.normalizedName, messageId: msg.id })"
+                    >
+                        {{ msg.title }}
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

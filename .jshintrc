@@ -1,0 +1,12 @@
+{
+  "undef": true,
+  "globals": {
+    "window": false,
+    "navigator": false,
+    "document": false,
+    "__dirname": false,
+    "require": false,
+    "module": false,
+    "angular": true
+  }
+}
