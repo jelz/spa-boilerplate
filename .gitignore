@@ -3,7 +3,8 @@
 /node_modules
 /bower_components
 
-/config/config.js
+/config/config.json
+/config/aws.json
 
 /public/build/style.css
 /public/build/style.min.css

@@ -2,9 +2,15 @@ var path = require('path');
 var base = function(p) { return path.join(__dirname, p); };
 var now = (new Date()).getTime();
 
+var readOptionalFile = function(g, path) {
+    try { return g.file.readJSON(path); } catch(e) {}
+    return {};
+};
+
 module.exports = function(g) {
     g.initConfig({
         pkg: g.file.readJSON('package.json'),
+        aws: readOptionalFile(g, 'config/aws.json'),
 
         clean: {
             vendor: {
@@ -131,6 +137,23 @@ module.exports = function(g) {
                     'lib/**/*.css'
                 ]
             }
+        },
+
+        s3: {
+            options: {
+                accessKeyId: "<%= aws.accessKey %>",
+                secretAccessKey: "<%= aws.secret %>",
+                bucket: "<%= aws.bucket %>",
+                region: "<%= aws.region %>",
+                sslEnabled: true,
+                gzip: true,
+                overwrite: true,
+                cache: true
+            },
+            publish: {
+                cwd: 'public/',
+                src: '**'
+            }
         }
     });
 
@@ -181,6 +204,7 @@ module.exports = function(g) {
     g.loadNpmTasks('grunt-contrib-watch');
     g.loadNpmTasks('grunt-text-replace');
     g.loadNpmTasks('grunt-newer');
+    g.loadNpmTasks('grunt-aws');
 
     g.registerTask('lint', [
         'newer:jshint:app'
@@ -216,6 +240,12 @@ module.exports = function(g) {
     g.registerTask('postinstall', [
         'vendor',
         'build-dev'
+    ]);
+
+    g.registerTask('publish', [
+        'vendor',
+        'build-prod',
+        's3:publish'
     ]);
 
     g.registerTask('default', [

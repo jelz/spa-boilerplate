@@ -28,6 +28,7 @@ Significant tasks:
   - `grunt build-dev`, `grunt build-prod` - build application in `dev`/`prod` mode
   - `grunt lint` - lint project using `.jshintrc` file (default included in project)
   - `grunt vendor` - reinstall and rebundle JavaScript vendors
+  - `grunt publish` - synchronize `public/` with S3 bucket
   - `grunt` - serve application with livereload
 
 When extending `Gruntfile.js` with other `npm` packages, use `--save-dev` flag:
@@ -54,7 +55,7 @@ You only have to have node.js installed. `bower` and `browserify` are installed 
 ```sh
 $ git clone git@github.com:jelz/spa-boilerplate.git
 $ cd spa-boilerplate
-$ cp config/config.js.dist config/config.js
+$ cp config/config.json.dist config/config.json
 $ npm install
 $ grunt
 ```
@@ -64,6 +65,18 @@ $ grunt
   - create `lib/{module-name}/` directory with `index.js` file in there
   - create AngularJS module in this file, export it from the module (`module.exports = ...;`)
   - update `lib/app/modules.js`, add dependency to main AngularJS module in `lib/app/index.js`
+  
+### S3 synchronization
+
+Use `grunt publish` to push code into S3 bucket. Provide AWS credentials and configuration in `config/aws.json`.
+
+```sh
+$ cp config/aws.json.dist config/aws.json
+$ vi config/aws.json
+$ grunt publish
+```
+
+Only changed files will be pushed. Bucket has to exist. No policy or website configuration will be added.
 
 ### License
 

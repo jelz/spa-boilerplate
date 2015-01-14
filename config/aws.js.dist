@@ -1,0 +1,6 @@
+{
+  "accessKey": "xyz",
+  "secret": "123",
+  "bucket": "domain.com",
+  "region": "eu-west-1"
+}
