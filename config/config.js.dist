@@ -1,8 +1,10 @@
 module.exports = {
     dev: {
+        devBox: true,
         apiUrl: '/api/mock'
     },
     prod: {
+        devBox: true,
         apiUrl: '/api'
     }
 };
