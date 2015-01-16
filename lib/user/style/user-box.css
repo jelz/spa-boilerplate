@@ -1,0 +1,15 @@
+.user-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid lightskyblue;
+    background:  lightblue;
+}
+
+.user-box p {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.user-box button {
+    font-size: 12px;
+}

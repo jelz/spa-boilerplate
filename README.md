@@ -21,7 +21,7 @@ $ bower install --save moment.js
 
 ### Build system
 
-Code is organized in CommonJS modules. These are bundled altogheter by `browserify`. Build tasks are defined in `Gruntfile.js`. Default `grunt` task runs server on `localhost:8000` and automatically rebuilds application on any source change. Rebuilded application is pushed into browser right away (livereload).
+Code is organized in CommonJS modules. These are bundled altogether by `browserify`. Build tasks are defined in `Gruntfile.js`. Default `grunt` task runs server on `localhost:8000` and automatically rebuilds application on any source change. Rebuilded application is pushed into browser right away (livereload).
 
 Significant tasks:
 
@@ -77,6 +77,18 @@ $ grunt publish
 ```
 
 Only changed files will be pushed. Bucket has to exist. No policy or website configuration will be added.
+
+### Token-based auth
+
+`UserState` Angular service provides basic token-based authentication flow. Calling `UserState.login()` redirects user to login service page (`loginUrl` in `config.json`) with query string parameter `?redirect_uri=...`. This service should authenticate user, issue a token and call SPA back with it:
+
+- if `redirect_uri` is a domain name without trialing slash, it should be appended with `/#___{token-value}`
+- if `redirect_uri` ends with slash or file name, it should be appended with `#___{token-value}`
+- if `redirect_uri` contains hash (`#`), then it should be appended with `___{token-value}`
+
+Any further `$http` requests will have `X-Access-Token` (can be changed in `config.json` - `tokenHeaderName` property) header set. Calling `UserState.logout()` clears all user-related data.
+
+`public/login/mock/login.js` implements mocked login flow.
 
 ### License
 

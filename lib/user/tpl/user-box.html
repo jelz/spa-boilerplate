@@ -1,0 +1,10 @@
+<div class="user-box">
+    <div data-ng-show="isLogged">
+        <p>You're logged in<span data-ng-show="user.username"> as <strong>{{ user.username }}</strong></span>.</p>
+        <button data-ng-click="logout()">Logout</button>
+    </div>
+    <div data-ng-show="!isLogged">
+        <p>You're not logged in.</p>
+        <button data-ng-click="login()">Login</button>
+    </div>
+</div>

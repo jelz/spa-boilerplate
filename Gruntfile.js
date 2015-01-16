@@ -131,7 +131,7 @@ module.exports = function(g) {
                 options: { livereload: true },
                 files: [
                     'fronts/*.html',
-                    'config/config.js',
+                    'config/config.json',
                     'lib/**/*.js',
                     'lib/**/*.html',
                     'lib/**/*.css'

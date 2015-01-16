@@ -1,10 +1,16 @@
 {
   "dev": {
     "devBox": true,
-    "apiUrl": "/api/mock"
+    "apiUrl": "/api/mock",
+    "loginUrl": "/login/mock/index.html",
+    "logoutUrl": "/login/mock/index.html",
+    "tokenHeaderName": "X-Access-Token"
   },
   "prod": {
     "devBox": true,
-    "apiUrl": "/api/mock"
+    "apiUrl": "/api/mock",
+    "loginUrl": "/login/mock/index.html",
+    "logoutUrl": "/login/mock/index.html",
+    "tokenHeaderName": "X-Access-Token"
   }
 }

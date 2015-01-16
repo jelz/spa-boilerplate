@@ -4,6 +4,7 @@
     "window": false,
     "navigator": false,
     "document": false,
+    "console": false,
     "__dirname": false,
     "require": false,
     "module": false,

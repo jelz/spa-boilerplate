@@ -1,8 +1,13 @@
 <div id="dev-box" data-ng-show="visible">
     <h3>dev-box</h3>
     <ul>
-        <li><strong>Application mode:</strong> {{ app.MODE }}</li>
+        <li><strong>Application mode:</strong> {{ mode }}</li>
         <li><strong>Current state:</strong> {{ state.current.name || 'unknown' }}</li>
+        <li><strong>Access token:</strong> {{ accessToken || 'none' }}</li>
+        <li>
+            <strong>User: </strong> {{ user.username || 'not logged in' }}
+            <span data-ng-show="user">(<a href data-ng-click="logout()">logout</a>)</span>
+        </li>
         <li><a href data-ng-click="purgeLocalStore()">Purge local store</a></li>
     </ul>
 </div>
