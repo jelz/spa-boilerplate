@@ -1,6 +1,14 @@
 var path = require('path');
+var fs = require('fs');
+
 var base = function(p) { return path.join(__dirname, p); };
 var now = (new Date()).getTime();
+
+var find = require('findit');
+var buildify = require('buildify');
+var browserify = require('browserify');
+var html = require('html-browserify');
+var exec = require('shelljs').exec;
 
 var readOptionalFile = function(g, path) {
     try { return g.file.readJSON(path); } catch(e) {}
@@ -8,6 +16,8 @@ var readOptionalFile = function(g, path) {
 };
 
 module.exports = function(g) {
+    require('time-grunt')(g);
+
     g.initConfig({
         pkg: g.file.readJSON('package.json'),
         aws: readOptionalFile(g, 'config/aws.json'),
@@ -158,16 +168,12 @@ module.exports = function(g) {
     });
 
     g.registerTask('bower', function() {
-        var exec = require('shelljs').exec;
         var bowerExecutable = base('node_modules/bower/bin/bower');
 
         exec(bowerExecutable + ' install');
     });
 
     g.registerTask('browserify', function() {
-        var fs = require('fs');
-        var browserify = require('browserify');
-        var html = require('html-browserify');
         var b = browserify();
         var done = this.async();
 
@@ -181,8 +187,6 @@ module.exports = function(g) {
     });
 
     g.registerTask('style', function() {
-        var find = require('findit');
-        var buildify = require('buildify');
         var files = [];
         var finder = find(base('lib'));
         var done = this.async();

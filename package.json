@@ -19,7 +19,8 @@
     "grunt-newer": "1.1.0",
     "grunt-text-replace": "0.4.0",
     "html-browserify": "0.0.4",
-    "shelljs": "0.3.0"
+    "shelljs": "0.3.0",
+    "time-grunt": "1.1.0"
   },
   "scripts": {
     "postinstall": "grunt postinstall"
